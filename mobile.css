@@ -5,7 +5,7 @@
     width: 120%;
     margin: 0 auto;
 	display: grid;
-	grid-template-columns: minmax(150px, 1fr) 4fr;
+	grid-template-columns: minmax(200px, 1fr) 4fr;
     row-gap: 10px;
     column-gap: 10px;
 	grid-auto-rows: minmax(30px, auto)
@@ -154,6 +154,7 @@
   padding-left: 100px;
   color: #c8c8c8;
 }
+
 
 
 
