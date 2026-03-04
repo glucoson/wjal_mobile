@@ -1,11 +1,11 @@
 
 .container {
     max-width: 1200px;
-    min-width: 750px;
+    min-width: 600px;
     width: 120%;
-   margin: 0 auto;
+    margin: 0 auto;
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: 1.2fr 4fr;
     row-gap: 10px;
     column-gap: 10px;
 	grid-auto-rows: minmax(30px, auto)
@@ -43,7 +43,7 @@
 
 .deff { 
   max-width: 1200px;
-  min-width: 750px;
+  min-width: 600px;
   width: 120%;
   margin: 0 auto;
   display : block;
@@ -59,7 +59,7 @@
 
 .line { 
   max-width: 1200px;
-  min-width: 750px;
+  min-width: 600px;
   width: 120%;
   margin: 0 auto;
   display : block;
@@ -127,7 +127,7 @@
 
 .title {
   max-width: 1200px;
-  min-width: 750px;
+  min-width: 600px;
   width: 120%;
   margin: 0 auto;
   display : block;
@@ -142,7 +142,7 @@
 
 .title2 {
   max-width: 1200px;
-  min-width: 750px;
+  min-width: 600px;
   width: 120%;
   margin: 0 auto;
   display : block;
@@ -154,10 +154,6 @@
   padding-left: 100px;
   color: #c8c8c8;
 }
-
-
-
-
 
 
 
