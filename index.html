@@ -27,6 +27,13 @@
   <script>
     const correctPassword = "sb"; // this will be visible in source code
 
+    const wrongMessages = [
+  '"비밀이 많은 남자가 더 매력적인 법이지요. 안 그렇습니까?" -웨더 굿맨 어록 中',
+  '"때로는 알지 못하더라도, 손에 쥔 것 만으로 가장 큰 비밀을 알게된 것일 때가 있어요." -앤 노아 어록 中',
+  '"아니, 혹시, 목 위에 붙어 있는 그 4.5키로는 장식일까? 응? 니 머리 말이야." -준 노아 어록 中',
+  '"왜 굳이 제 비밀을 캐내려 하시나요, 그대의 비밀은 아무것도 알려주지 않으면서···." -레이시 노아 어록 中'
+];
+
     document.getElementById("loginForm").addEventListener("submit", function(e) {
       e.preventDefault(); // stop normal form submission
 
@@ -35,7 +42,8 @@
       if (userInput === correctPassword) {
         window.location.href = "main.html";
       } else {
-        alert('"비밀이 많은 남자가 더 매력적인 법이지요. 안 그렇습니까?" -웨더 굿맨 어록 中');
+        const randomIndex = Math.floor(Math.random() * wrongMessages.length);
+        alert(wrongMessages[randomIndex]);
       }
     });
   </script>
