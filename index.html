@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-  </head>
+<html>
+<head>
+  <title>Login</title>
+</head>
 <body>
-<form>
-  Submit password : <input id='pwd' type='password' maxlength='30'/><br>
-  <input type='submit'>
-</form>
+
+  <form id="loginForm">
+    <input type="password" id="passwordInput" placeholder="Enter Password...">
+    <button type="submit">확인</button>
+  </form>
+
+  <script>
+    const correctPassword = "sibalsibalfeelslikejot"; // this will be visible in source code
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // stop normal form submission
+
+      const userInput = document.getElementById("passwordInput").value;
+
+      if (userInput === correctPassword) {
+        window.location.href = "main.html";
+      } else {
+        alert("응그거아니다");
+      }
+    });
+  </script>
+
 </body>
 </html>
