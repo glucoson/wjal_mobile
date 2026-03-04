@@ -1,7 +1,7 @@
 
 .container {
     max-width: 1200px;
-    width: 100%;
+    width: 120%;
    margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 4fr;
@@ -42,7 +42,7 @@
 
 .deff { 
   max-width: 1200px;
-  width: 100%;
+  width: 120%;
   margin: 0 auto;
   display : block;
   color: #9c9ea2;
@@ -57,7 +57,7 @@
 
 .line { 
   max-width: 1200px;
-  width: 100%;
+  width: 120%;
   margin: 0 auto;
   display : block;
   color: #7b7c80;
@@ -124,7 +124,7 @@
 
 .title {
   max-width: 1200px;
-  width: 100%;
+  width: 120%;
  margin: 0 auto;
   display : block;
   font-family: "Nanum Myeongjo", serif;
@@ -138,7 +138,7 @@
 
 .title2 {
   max-width: 1200px;
-  width: 100%;
+  width: 120%;
  margin: 0 auto;
   display : block;
   font-family: "Nanum Myeongjo", serif;
