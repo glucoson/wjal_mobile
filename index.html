@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Gowun+Dodum&family=Grandiflora+One&family=Hahmlet:wght@100..900&family=Nanum+Myeongjo:wght@400;700&display=swap');
+</style>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="mobile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비번</title>
 </head>
 <body>
 
@@ -11,7 +17,7 @@
   </form>
 
   <script>
-    const correctPassword = "sibalsibalfeelslikejot"; // this will be visible in source code
+    const correctPassword = "sb"; // this will be visible in source code
 
     document.getElementById("loginForm").addEventListener("submit", function(e) {
       e.preventDefault(); // stop normal form submission
@@ -21,7 +27,7 @@
       if (userInput === correctPassword) {
         window.location.href = "main.html";
       } else {
-        alert("응그거아니다");
+        alert("담 넘는 실력이 영 별로던데요!");
       }
     });
   </script>
