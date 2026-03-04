@@ -1,6 +1,7 @@
 
 .container {
     max-width: 1200px;
+	min-width: 800px;
     width: 100%;
     margin: 0 auto;
 	display: grid;
@@ -42,6 +43,7 @@
 
 .deff { 
   max-width: 1200px;
+  min-width: 800px;
   width: 100%;
   margin: 0 auto;
   display : block;
@@ -57,6 +59,7 @@
 
 .line { 
   max-width: 1200px;
+  min-width: 800px;
   width: 100%;
   margin: 0 auto;
   display : block;
@@ -124,6 +127,7 @@
 
 .title {
   max-width: 1200px;
+  min-width: 800px;
   width: 100%;
   margin: 0 auto;
   display : block;
@@ -138,6 +142,7 @@
 
 .title2 {
   max-width: 1200px;
+  min-width: 800px;
   width: 100%;
   margin: 0 auto;
   display : block;
@@ -149,3 +154,4 @@
   padding-left: 100px;
   color: #c8c8c8;
 }
+
