@@ -25,7 +25,7 @@
   </span>
 
   <script>
-    const correctPassword = "sibalsibalfeelslikejot"; // this will be visible in source code
+    const correctPassword = "sibalsibalfeelslikejot"; 
 
     const wrongMessages = [
   '"비밀이 많은 남자가 더 매력적인 법이지요. 안 그렇습니까?" -웨더 굿맨 어록 中',
@@ -35,8 +35,7 @@
 ];
 
     document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault(); // stop normal form submission
-
+      e.preventDefault(); 
       const userInput = document.getElementById("passwordInput").value;
 
       if (userInput === correctPassword) {
