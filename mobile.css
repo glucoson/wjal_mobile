@@ -1,11 +1,11 @@
 
 .container {
     max-width: 1200px;
-    min-width: 600px;
+    min-width: 700px;
     width: 120%;
    margin: 0 auto;
 	display: grid;
-	grid-template-columns: minmax(130,1fr) 4fr;
+	grid-template-columns: 1fr 4fr;
     row-gap: 10px;
     column-gap: 10px;
 	grid-auto-rows: minmax(30px, auto)
@@ -154,6 +154,7 @@
   padding-left: 100px;
   color: #c8c8c8;
 }
+
 
 
 
