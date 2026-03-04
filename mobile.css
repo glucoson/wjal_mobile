@@ -43,7 +43,7 @@
 
 .deff { 
   max-width: 1200px;
-  min-width: 600px;
+  min-width: 750px;
   width: 120%;
   margin: 0 auto;
   display : block;
@@ -154,6 +154,7 @@
   padding-left: 100px;
   color: #c8c8c8;
 }
+
 
 
 
