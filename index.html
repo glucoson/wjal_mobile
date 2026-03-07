@@ -24,28 +24,58 @@
   </span>
   </span>
 
-  <script>
-    const correctPassword = "sibalsibalfeelslikejot"; 
+<script>
 
-    const wrongMessages = [
-  '"비밀이 많은 남자가 더 매력적인 법이지요. 안 그렇습니까?" -웨더 굿맨 어록 中',
-  '"때로는 알지 못하더라도, 손에 쥔 것 만으로 가장 큰 비밀을 알게된 것일 때가 있어요." -앤 노아 어록 中',
-  '"아니, 혹시, 목 위에 붙어 있는 그 4.5키로는 장식일까? 응? 니 머리 말이야." -준 노아 어록 中',
-  '"왜 굳이 제 비밀을 캐내려 하시나요, 그대의 비밀은 아무것도 알려주지 않으면서···." -레이시 노아 어록 中'
+async function sha256(msg){
+  const buf = new TextEncoder().encode(msg);
+  const hash = await crypto.subtle.digest("SHA-256", buf);
+  return Array.from(new Uint8Array(hash))
+      .map(b => b.toString(16).padStart(2,"0"))
+      .join("");
+}
+const parts = [
+  "NzJhOWUxYzk=",
+  "ZGI4YzhjN2E=",
+  "NGY0ZDliOGY=",
+  "ZGI2NWE4ZTE=",
+  "YzBhOWIzYTg=",
+  "NGYzYTdiMGI=",
+  "NWM5ZThhM2I=",
+  "N2MwZjZkNjM="
 ];
 
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault(); 
-      const userInput = document.getElementById("passwordInput").value;
+function decodeBase64(s){
+  return atob(s);
+}
 
-      if (userInput === correctPassword) {
-        window.location.href = "main.html";
-      } else {
-        const randomIndex = Math.floor(Math.random() * wrongMessages.length);
-        alert(wrongMessages[randomIndex]);
-      }
-    });
-  </script>
+function buildHash(){
+  return parts.map(decodeBase64).join("");
+}
+
+document.getElementById("loginForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+
+  const input = document.getElementById("passwordInput").value;
+
+  const hashedInput = await sha256(input);
+  const correctHash = buildHash();
+
+  if(hashedInput === correctHash){
+      window.location.href = "7f3a91b2.html";
+  } else {
+      const msgs = ['"비밀이 많은 남자가 더 매력적인 법이지요. 안 그렇습니까?" -웨더 굿맨 어록 中',
+                    '"때로는 알지 못하더라도, 손에 쥔 것 만으로 가장 큰 비밀을 알게된 것일 때가 있어요." -앤 노아 어록 中',
+                    '"아니, 혹시, 목 위에 붙어 있는 그 4.5키로는 장식일까? 응? 니 머리 말이야." -준 노아 어록 中',
+                    '"왜 굳이 제 비밀을 캐내려 하시나요, 그대의 비밀은 아무것도 알려주지 않으면서···." -레이시 노아 어록 中'
+      ];
+
+      const r = Math.floor(Math.random()*msgs.length);
+      alert(msgs[r]);
+  }
+
+});
+
+</script>
 
 </body>
 </html>
